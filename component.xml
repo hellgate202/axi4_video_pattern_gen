@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <spirit:vendor>user.org</spirit:vendor>
+  <spirit:vendor>hellgate202</spirit:vendor>
   <spirit:library>user</spirit:library>
-  <spirit:name>axi4_video_pattern_gen_wrap</spirit:name>
+  <spirit:name>axi4_video_pattern_gen</spirit:name>
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
@@ -102,7 +102,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bc68221b</spirit:value>
+            <spirit:value>18556ab2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -118,7 +118,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bc68221b</spirit:value>
+            <spirit:value>18556ab2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -279,14 +279,14 @@
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/axi4_video_pattern_gen_wrap_v1_0.tcl</spirit:name>
+        <spirit:name>xgui/axi4_video_pattern_gen_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_ce963d89</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>AXI4 Color Stripes Video Generator</spirit:description>
+  <spirit:description>Color Stripes Video Stream Generator</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>Y_ACTIVE</spirit:name>
@@ -316,49 +316,62 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:supportedFamilies>
-        <xilinx:family xilinx:lifeCycle="Production">virtex7</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">qvirtex7</xilinx:family>
         <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
         <xilinx:family xilinx:lifeCycle="Production">kintex7l</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">qkintex7</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">qkintex7l</xilinx:family>
         <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
         <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
         <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">qartix7</xilinx:family>
         <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
         <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
         <xilinx:family xilinx:lifeCycle="Production">spartan7</xilinx:family>
         <xilinx:family xilinx:lifeCycle="Production">aspartan7</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">virtexu</xilinx:family>
         <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">virtexuplus</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">virtexuplusHBM</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">kintexuplus</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
       </xilinx:supportedFamilies>
       <xilinx:taxonomies>
         <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>AXI4-Stream Video Pattern Generator</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-04-20T21:39:18Z</xilinx:coreCreationDateTime>
+      <xilinx:vendorDisplayName>hellgate202</xilinx:vendorDisplayName>
+      <xilinx:vendorURL>https://github.com/hellgate202</xilinx:vendorURL>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2019-04-22T13:13:49Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@109b30c8_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@39e09ff3_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f78138e_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@32bfe007_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@34529323_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a146b44_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@78b4c3a1_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4888be74_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d3837f2_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bdf2cd3_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a639094_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4df31812_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54d94e88_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bc1dba6_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2aafa08_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@abf116f_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73a68efc_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@160413f_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23d6544c_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30100381_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7743907d_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a10518a_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f665300_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42c7822b_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78b6031a_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64303fcb_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d1f7c81_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68ed0969_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49e0d089_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c02bb45_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28308ffb_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b7279d1_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cebed98_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57f24240_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@387771aa_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e073ba8_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="abc0a25e"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f8de4471"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ef1b697f"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="ececa8f7"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="5dc589eb"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="c89d670b"/>
