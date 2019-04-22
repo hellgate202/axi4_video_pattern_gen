@@ -286,7 +286,7 @@
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>axi4_video_pattern_gen_wrap_v1_0</spirit:description>
+  <spirit:description>AXI4 Color Stripes Video Generator</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>Y_ACTIVE</spirit:name>
@@ -341,7 +341,7 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>axi4_video_pattern_gen_wrap_v1_0</xilinx:displayName>
+      <xilinx:displayName>AXI4-Stream Video Pattern Generator</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
       <xilinx:coreRevision>2</xilinx:coreRevision>
       <xilinx:coreCreationDateTime>2019-04-20T21:39:18Z</xilinx:coreCreationDateTime>
