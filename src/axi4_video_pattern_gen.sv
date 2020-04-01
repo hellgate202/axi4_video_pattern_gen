@@ -29,7 +29,7 @@ always_ff @( posedge clk_i, posedge rst_i )
   if( rst_i )
     px_cnt <= '0;
   else
-    if( px_cnt == ( X_RES - 1 ) )
+    if( px_cnt == ( X_RES - 1 ) && video_o.tready )
       px_cnt <= '0;
     else
       px_cnt <= px_cnt + 1'b1;

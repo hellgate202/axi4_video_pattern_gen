@@ -13,10 +13,10 @@ module axi4_video_pattern_gen_wrap #(
 );
 
 axi4_stream_if #(
-  .DATA_WIDTH ( 32     ),
-  .DEST_WIDTH ( 1      ),
-  .ID_WIDTH   ( 1      ),
-  .USER_WIDTH ( 1      )
+  .TDATA_WIDTH ( 32     ),
+  .TDEST_WIDTH ( 1      ),
+  .TID_WIDTH   ( 1      ),
+  .TUSER_WIDTH ( 1      )
 ) video_o (
   .aclk       ( clk_i  ),
   .aresetn    ( !rst_i )
