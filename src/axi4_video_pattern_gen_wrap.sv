@@ -9,7 +9,8 @@ module axi4_video_pattern_gen_wrap #(
   output [31 : 0] video_o_tdata,
   output          video_o_tvalid,
   output          video_o_tlast,
-  output          video_o_tuser
+  output          video_o_tuser,
+  input           video_o_tready
 );
 
 axi4_stream_if #(
@@ -26,6 +27,7 @@ assign video_o_tdata  = video_o.tdata;
 assign video_o_tvalid = video_o.tvalid;
 assign video_o_tlast  = video_o.tlast;
 assign video_o_tuser  = video_o.tuser;
+assign video_o.tready = video_o_tready;
 
 axi4_video_pattern_gen #(
   .Y_ACTIVE   ( Y_ACTIVE   ),

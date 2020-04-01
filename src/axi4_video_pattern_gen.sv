@@ -9,8 +9,8 @@ module axi4_video_pattern_gen #(
   axi4_stream_if.master video_o
 );
 
-localparam int Y_RES         = Y_ACTIVE + Y_BLANKING;
-localparam int X_RES         = X_ACTIVE + X_BLANKING;
+localparam int Y_RES         = Y_ACTIVE; //+ Y_BLANKING;
+localparam int X_RES         = X_ACTIVE; //+ X_BLANKING;
 localparam int PX_CNT_WIDTH  = $clog2( X_RES );
 localparam int LN_CNT_WIDTH  = $clog2( Y_RES );
 localparam int LANE_1_BORDER = ( X_ACTIVE / 8 ) * 1;
@@ -29,34 +29,47 @@ always_ff @( posedge clk_i, posedge rst_i )
   if( rst_i )
     px_cnt <= '0;
   else
-    if( px_cnt == ( X_RES - 1 ) && video_o.tready )
-      px_cnt <= '0;
-    else
-      px_cnt <= px_cnt + 1'b1;
+    if( video_o.tready )
+      if( px_cnt == ( X_RES - 1 ) )
+        px_cnt <= '0;
+      else
+        px_cnt <= px_cnt + 1'b1;
 
 always_ff @( posedge clk_i, posedge rst_i )
   if( rst_i )
     ln_cnt <= '0;
   else
-    if( ( px_cnt == ( X_RES - 1 ) ) )
-      if( ln_cnt == ( Y_RES - 1 ) )
-        ln_cnt <= '0;
-      else
-        ln_cnt <= ln_cnt + 1'b1;
+    if( video_o.tready )
+      if( ( px_cnt == ( X_RES - 1 ) ) )
+        if( ln_cnt == ( Y_RES - 1 ) )
+          ln_cnt <= '0;
+        else
+          ln_cnt <= ln_cnt + 1'b1;
 
+assign video_o.tvalid = 1'b1;
+
+/*
 always_ff @( posedge clk_i, posedge rst_i )
   if( rst_i )
     video_o.tvalid <= 1'b0;
   else
-    if( ( ln_cnt < Y_ACTIVE ) && ( px_cnt < X_ACTIVE ) )
+    if( ( ln_cnt < Y_ACTIVE ) && ( px_cnt < X_ACTIVE - 1 ) )
       video_o.tvalid <= 1'b1;
     else
-      video_o.tvalid <= 1'b0;
+      if( video_o.tready )
+        video_o.tvalid <= 1'b0;
+*/
 
 always_ff @( posedge clk_i, posedge rst_i )
   if( rst_i )
     video_o.tdata <= '0;
   else
+    begin
+      video_o.tdata[9 : 0]   <= px_cnt[9 : 0];
+      video_o.tdata[19 : 10] <= px_cnt[9 : 0];
+      video_o.tdata[29 : 20] <= px_cnt[9 : 0];
+    end
+    /*
     if( px_cnt < LANE_1_BORDER )
       video_o.tdata <= 32'h00000000;
     else
@@ -79,24 +92,25 @@ always_ff @( posedge clk_i, posedge rst_i )
                   video_o.tdata <= 32'h3ffffc00;
                 else
                   video_o.tdata <= 32'h3fffffff;
+*/
 
 always_ff @( posedge clk_i, posedge rst_i )
   if( rst_i )
     video_o.tlast <= 1'b0;
   else
-    if( px_cnt == ( X_ACTIVE - 1 ) )
+    if( px_cnt == ( X_ACTIVE - 2 ) )
       video_o.tlast <= 1'b1;
     else
       video_o.tlast <= 1'b0;
 
 always_ff @( posedge clk_i, posedge rst_i )
   if( rst_i )
-    video_o.tuser <= 1'b0;
+    video_o.tuser <= 1'b1;
   else
-    if( ( px_cnt == '0 ) &&
-        ( ln_cnt == '0 ) )
-      video_o.tuser <= 1'b1;
-    else
-      video_o.tuser <= 1'b0;
+    if( video_o.tready )
+      if( video_o.tlast && ln_cnt == ( Y_RES - 1 ) )
+        video_o.tuser <= 1'b1;
+      else
+        video_o.tuser <= 1'b0;
 
 endmodule

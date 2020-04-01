@@ -43,6 +43,14 @@
             <spirit:name>video_o_tvalid</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>video_o_tready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
       </spirit:portMaps>
     </spirit:busInterface>
     <spirit:busInterface>
@@ -102,7 +110,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>18556ab2</spirit:value>
+            <spirit:value>3a2945e5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -118,7 +126,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>18556ab2</spirit:value>
+            <spirit:value>3a2945e5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -220,6 +228,19 @@
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
+      <spirit:port>
+        <spirit:name>video_o_tready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
     </spirit:ports>
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="int">
@@ -258,7 +279,7 @@
       <spirit:file>
         <spirit:name>src/axi4_video_pattern_gen_wrap.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_67b2592e</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_c17ddd28</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -334,8 +355,8 @@
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
       <xilinx:vendorDisplayName>hellgate202</xilinx:vendorDisplayName>
       <xilinx:vendorURL>https://github.com/hellgate202</xilinx:vendorURL>
-      <xilinx:coreRevision>3</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-04-22T13:13:49Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2020-04-01T16:38:15Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4888be74_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4d3837f2_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
@@ -366,13 +387,25 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@57f24240_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@387771aa_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@5e073ba8_ARCHIVE_LOCATION">/home/liv/fpga/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4039511a_ARCHIVE_LOCATION">/home/liv/fpga/zybo_z7_hdmi_test/ip/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cc177bb_ARCHIVE_LOCATION">/home/liv/fpga/zybo_z7_hdmi_test/ip/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@220f4fc8_ARCHIVE_LOCATION">/home/liv/fpga/zybo_z7_hdmi_test/ip/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ccd8258_ARCHIVE_LOCATION">/home/liv/fpga/zybo_z7_hdmi_test/ip/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f15170e_ARCHIVE_LOCATION">/home/liv/fpga/zybo_z7_hdmi_test/ip/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66209e48_ARCHIVE_LOCATION">/home/liv/fpga/zybo_z7_hdmi_test/ip/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d08076d_ARCHIVE_LOCATION">/home/liv/fpga/zybo_z7_hdmi_test/ip/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@371456a8_ARCHIVE_LOCATION">/home/liv/fpga/zybo_z7_hdmi_test/ip/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50720ae7_ARCHIVE_LOCATION">/home/liv/fpga/zybo_z7_hdmi_test/ip/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33b1620_ARCHIVE_LOCATION">/home/liv/fpga/zybo_z7_hdmi_test/ip/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6416c341_ARCHIVE_LOCATION">/home/liv/fpga/zybo_z7_hdmi_test/ip/axi4_video_pattern_gen</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e016508_ARCHIVE_LOCATION">/home/liv/fpga/zybo_z7_hdmi_test/ip/axi4_video_pattern_gen</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="abc0a25e"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ef1b697f"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="ececa8f7"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="74910339"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="6930c71c"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="9f7f809e"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="5dc589eb"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="c89d670b"/>
     </xilinx:packagingInfo>
